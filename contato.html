@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Contato</h1>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="sobre.html">Sobre Nós</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<section>
+    <h2>Envie sua mensagem</h2>
+
+    <form>
+
+        <p>
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome" required>
+        </p>
+
+        <p>
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email" required>
+        </p>
+
+        <p>
+            <label for="telefone">Telefone:</label><br>
+            <input type="tel" id="telefone" name="telefone">
+        </p>
+
+        <p>
+            <label for="assunto">Assunto:</label><br>
+            <input type="text" id="assunto" name="assunto" required>
+        </p>
+
+        <p>
+            <label for="mensagem">Mensagem:</label><br>
+            <textarea id="mensagem" name="mensagem" rows="5" cols="40" required></textarea>
+        </p>
+
+        <p>
+            <input type="checkbox" id="privacidade" required>
+            <label for="privacidade">
+                Concordo com a política de privacidade
+            </label>
+        </p>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+
+    </form>
+</section>
+
+</main>
+
+<footer>
+    <p>Contato institucional — Colégio Estadual Brazilino Viégas</p>
+</footer>
+
+</body>
+</html>
