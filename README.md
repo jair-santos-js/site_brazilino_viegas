@@ -1,61 +1,65 @@
----
+# Site Institucional - Colégio Estadual Brazilino Viegas
 
-## Páginas Desenvolvidas
+## Descrição
+Este projeto foi desenvolvido para a disciplina de Desenvolvimento Web da Licenciatura em Computação da Universidade Federal do Recôncavo da Bahia (UFRB).
 
-### Página Inicial (index.html)
+O objetivo foi estilizar e tornar responsivo o site institucional desenvolvido anteriormente, utilizando HTML5 e CSS3. Foram aplicados princípios de design web, organização visual e adaptação para diferentes dispositivos.
 
-- Apresentação do Colégio Estadual Brazilino Viégas;
-- Informações sobre educação, tecnologia e inclusão social;
-- Destaque para o projeto de extensão "IA na Escola";
-- Links úteis para instituições educacionais.
+## Tecnologias Utilizadas
 
-### Sobre Nós (sobre.html)
+- HTML5
+- CSS3
+- Flexbox
+- Media Queries
 
-- História da instituição;
-- Missão;
-- Visão.
+## Estrutura do Projeto
 
-### Cursos e Projetos (cursos.html)
+- index.html
+- sobre.html
+- cursos.html
+- contato.html
+- style.css
+- pasta imagens
 
-- Tabela de projetos educacionais;
-- Informações sobre iniciativas desenvolvidas pela escola.
+## Funcionalidades
 
-### Contato (contato.html)
+- Navegação entre páginas
+- Layout responsivo
+- Formulário de contato
+- Tabela de informações
+- Imagens adaptáveis
+- Design visual organizado
 
-- Formulário de contato;
-- Campos de nome, e-mail, telefone, assunto e mensagem;
-- Política de privacidade.
+## Responsividade
+O site foi desenvolvido para funcionar em:
 
----
+- Smartphones
+- Tablets
+- Computadores
 
-## Recursos CSS Aplicados
+Utilizando Media Queries para adaptação automática do layout.
 
-- Seletores CSS;
-- Layout com Flexbox;
-- Estilização de menus;
-- Formatação de formulários;
-- Estilização de tabelas;
-- Efeitos Hover;
-- Responsividade com Media Queries;
-- Organização visual utilizando cores, espaçamentos e sombras.
+## Autor
+Jair dos Santos Lima
 
----
+Licenciatura em Computação – UFRB
+ 
+## Responsividade
 
-## Objetivo da Atividade
+O site foi desenvolvido para funcionar adequadamente em diferentes tamanhos de tela.
 
-Aplicar estilos CSS de forma organizada em páginas HTML, utilizando seletores apropriados e criando layouts visualmente agradáveis, conforme os requisitos da disciplina Desenvolvimento de Software I.
+### Desktop
+- Layout completo para computadores.
 
----
+### Tablet
+- Ajuste automático dos elementos para telas médias.
+
+### Mobile
+- Reorganização do menu e do conteúdo para melhor visualização em smartphones.
 
 ## Autor
 
-**Jair dos Santos Lima**
+Jair dos Santos Lima
 
-Licenciatura em Computação  
-Universidade Federal do Recôncavo da Bahia (UFRB)
-
----
-
-## Licença
-
-Projeto desenvolvido exclusivamente para fins acadêmicos.
+Licenciatura em Computação – UFRB
+Disciplina: Desenvolvimento Web
