@@ -6,10 +6,13 @@
     box-sizing: border-box;
 }
 
+/* Google Font: Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
 /* CORPO DA PÁGINA */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
     background-color: #f4f6f9;
     color: #000; /* texto do corpo em preto */
     line-height: 1.6;
@@ -27,6 +30,21 @@ header {
 header h1 {
     margin-bottom: 10px;
     color: #b8860b; /* amarelo escuro */
+    font-size: 2rem;
+}
+
+/* Menu toggle (hambúrguer) */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: inherit;
+}
+
+.menu-toggle:focus {
+    outline: 2px solid rgba(0,0,0,0.2);
 }
 
 /* Nome da escola em cinza bem escuro quando necessário */
@@ -201,6 +219,7 @@ footer {
 @media (max-width: 768px) {
 
     /* Layout geral */
+    html { font-size: 100%; }
     body {
         font-size: 16px;
     }
@@ -218,11 +237,24 @@ footer {
         font-size: 0.95rem;
     }
 
-    /* Menu empilha e ocupa largura total */
+    /* Menu: oculto por padrão, mostrado via toggle */
+    .menu-toggle {
+        display: inline-block;
+        position: absolute;
+        top: 18px;
+        right: 18px;
+    }
+
     nav ul {
+        display: none; /* escondido até abrir */
         flex-direction: column;
         gap: 10px;
         align-items: center;
+        margin-top: 10px;
+    }
+
+    nav.open ul {
+        display: flex;
     }
 
     nav a {

@@ -11,6 +11,8 @@
 <header>
     <h1>Sobre o Colégio</h1>
 
+    <button class="menu-toggle" aria-expanded="false" aria-label="Abrir menu">☰</button>
+
     <nav>
         <ul>
             <li><a href="index.html">Início</a></li>
@@ -58,9 +60,9 @@
     <h2>Galeria de Imagens</h2>
 
     <div class="galeria">
-        <img src="imagens/escola1.jpg" alt="Imagem da escola">
-        <img src="imagens/escola2.jpg" alt="Laboratório de informática">
-        <img src="imagens/escola3.jpg" alt="Atividades educacionais">
+        <img src="imagens/escola1.jpg" alt="Imagem descritiva da escola 1">
+        <img src="imagens/escola2.jpg" alt="Imagem descritiva da escola 2">
+        <img src="imagens/escola3.jpg" alt="Imagem descritiva da escola 3">
     </div>
 </section>
 
@@ -69,6 +71,20 @@
 <footer>
     <p>Colégio Estadual Brazilino Viégas — Alagoinhas-BA</p>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.menu-toggle').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var nav = btn.nextElementSibling;
+      if(!nav) return;
+      nav.classList.toggle('open');
+      var expanded = nav.classList.contains('open');
+      btn.setAttribute('aria-expanded', expanded);
+    });
+  });
+});
+</script>
 
 </body>
 </html>
