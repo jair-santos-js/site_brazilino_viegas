@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Colégio Estadual Brazilino Viégas</title>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<header>
+<h1>Colégio Estadual Brazilino Viégas</h1>
+<p><span class="nome-escola">Educação, Tecnologia e Inclusão Social</span></p>
+<button aria-expanded="false" aria-label="Abrir menu" class="menu-toggle">☰</button>
+<nav>
+<ul>
+<li><a href="index.html">Início</a></li>
+<li><a href="sobre.html">Sobre Nós</a></li>
+<li><a href="cursos.html">Cursos</a></li>
+<li><a href="contato.html">Contato</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<section>
+<h2>Bem-vindo ao nosso colégio</h2>
+<article>
+<h3>Educação de qualidade</h3>
+<p>
+            O Colégio Estadual Brazilino Viégas atua na formação educacional de jovens e adultos,
+            promovendo inclusão, cidadania e inovação tecnológica.
+        </p>
+</article>
+</section>
+<section>
+<h2>Projeto de Extensão</h2>
+<article>
+<h3>IA na Escola</h3>
+<p>
+            O projeto “IA na Escola – Inovação Tecnológica e Impacto Social na Educação Básica”
+            busca aproximar professores e estudantes das novas tecnologias educacionais.
+        </p>
+</article>
+</section>
+<section>
+<h2>Galeria de Imagens</h2>
+<p>Conheça melhor nossa escola através das fotos:</p>
+<div class="galeria">
+  <picture>
+    <source type="image/webp" srcset="imagens/escola1.webp">
+    <img src="imagens/escola1.jpg" alt="Colégio Brazilino Viégas — Vista frontal do Colégio Brazilino Viégas" loading="lazy">
+  </picture>
+  <picture>
+    <source type="image/webp" srcset="imagens/escola2.webp">
+    <img src="imagens/escola2.jpg" alt="Colégio Brazilino Viégas — Alunos no pátio da escola" loading="lazy">
+  </picture>
+  <picture>
+    <source type="image/webp" srcset="imagens/escola3.webp">
+    <img src="imagens/escola3.jpg" alt="Colégio Brazilino Viégas — Sala de aula moderna" loading="lazy">
+  </picture>
+  <picture>
+    <source type="image/webp" srcset="imagens/escola4.webp">
+    <img src="imagens/escola4.jpg" alt="Colégio Brazilino Viégas — Biblioteca escolar" loading="lazy">
+  </picture>
+  <picture>
+    <source type="image/webp" srcset="imagens/escola5.webp">
+    <img src="imagens/escola5.jpg" alt="Colégio Brazilino Viégas — Evento cultural na escola" loading="lazy">
+  </picture>
+  <picture>
+    <source type="image/webp" srcset="imagens/escola6.webp">
+    <img src="imagens/escola6.jpg" alt="Colégio Brazilino Viégas — Laboratório de informática" loading="lazy">
+  </picture>
+  <picture>
+    <source type="image/webp" srcset="imagens/escola7.webp">
+    <img src="imagens/escola7.jpg" alt="Colégio Brazilino Viégas — Quadra esportiva" loading="lazy">
+  </picture>
+  <picture>
+    <source type="image/webp" srcset="imagens/escola8.webp">
+    <img src="imagens/escola8.jpg" alt="Colégio Brazilino Viégas — Formatura de alunos" loading="lazy">
+  </picture>
+  <picture>
+    <source type="image/webp" srcset="imagens/escola9.webp">
+    <img src="imagens/escola9.jpg" alt="Colégio Brazilino Viégas — Projeto ambiental" loading="lazy">
+  </picture>
+  <picture>
+    <source type="image/webp" srcset="imagens/escola10.webp">
+    <img src="imagens/escola10.jpg" alt="Colégio Brazilino Viégas — Equipe pedagógica" loading="lazy">
+  </picture>
+</div>
+</section>
+<aside>
+<h2>Links úteis</h2>
+<ul>
+<li>
+<a class="link-util" href="https://www.ufrb.edu.br" target="_blank">
+                Universidade Federal do Recôncavo da Bahia
+            </a>
+</li>
+<li>
+<a class="link-util" href="https://www.gov.br/mec" target="_blank">
+                Ministério da Educação
+            </a>
+</li>
+</ul>
+</aside>
+</main>
+<footer>
+<p>
+        Desenvolvido por Jair dos Santos Lima — Licenciatura em Computação — UFRB
+    </p>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.menu-toggle').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var nav = btn.nextElementSibling;
+      if(!nav) return;
+      nav.classList.toggle('open');
+      var expanded = nav.classList.contains('open');
+      btn.setAttribute('aria-expanded', expanded);
+    });
+  });
+});
+</script>
+</body>
+</html>

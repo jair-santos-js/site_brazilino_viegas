@@ -352,23 +352,43 @@ footer {
 
 }
 
-/* ===== GALERIA DE IMAGENS ===== */
-
+/* GALERIA DE IMAGENS - Melhorada para 10+ imagens */
 .galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
     margin-top: 20px;
 }
 
 .galeria img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
     border-radius: 8px;
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
 .galeria img:hover {
-    transform: scale(1.05);
+    transform: scale(1.06);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .galeria img {
+        height: 140px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .galeria {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

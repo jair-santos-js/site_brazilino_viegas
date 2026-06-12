@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sobre Nós</title>
+<link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<header>
+<h1>Sobre o Colégio</h1>
+<button aria-expanded="false" aria-label="Abrir menu" class="menu-toggle">☰</button>
+<nav>
+<ul>
+<li><a href="index.html">Início</a></li>
+<li><a href="sobre.html">Sobre Nós</a></li>
+<li><a href="cursos.html">Cursos</a></li>
+<li><a href="contato.html">Contato</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<section>
+<h2>Nossa História</h2>
+<article>
+<p>
+            O Colégio Estadual Brazilino Viégas possui importante atuação na educação pública,
+            promovendo ensino de qualidade e ações voltadas para inclusão social.
+        </p>
+</article>
+</section>
+<section>
+<h2>Missão</h2>
+<article>
+<p>
+            Formar cidadãos críticos, conscientes e preparados para os desafios tecnológicos da sociedade moderna.
+        </p>
+</article>
+</section>
+<section>
+<h2>Visão</h2>
+<article>
+<p>
+            Ser referência em inovação educacional e integração entre tecnologia e aprendizagem.
+        </p>
+</article>
+</section>
+<section>
+<h2>Galeria de Imagens</h2>
+<p>Conheça as instalações e o dia a dia do Colégio Estadual Brazilino Viégas:</p>
+<div class="galeria">
+  <picture>
+    <source type="image/webp" srcset="imagens/escola1.webp">
+    <img src="imagens/escola1.jpg" alt="Colégio Brazilino Viégas — Vista frontal do Colégio Brazilino Viégas com entrada principal" loading="lazy">
+  </picture>
+  <picture>
+    <source type="image/webp" srcset="imagens/escola2.webp">
+    <img src="imagens/escola2.jpg" alt="Colégio Brazilino Viégas — Fachada azul e branca do Colégio Brazilino Viégas" loading="lazy">
+  </picture>
+  <picture>
+    <source type="image/webp" srcset="imagens/escola3.webp">
+    <img src="imagens/escola3.jpg" alt="Colégio Brazilino Viégas — Vista lateral do prédio escolar" loading="lazy">
+  </picture>
+  <picture>
+    <source type="image/webp" srcset="imagens/escola5.webp">
+    <img src="imagens/escola5.jpg" alt="Colégio Brazilino Viégas — Pátio interno da escola com palmeira" loading="lazy">
+  </picture>
+  <picture>
+    <source type="image/webp" srcset="imagens/escola6.webp">
+    <img src="imagens/escola6.jpg" alt="Colégio Brazilino Viégas — Entrada principal da escola com detalhes arquitetônicos" loading="lazy">
+  </picture>
+  <picture>
+    <source type="image/webp" srcset="imagens/escola7.webp">
+    <img src="imagens/escola7.jpg" alt="Colégio Brazilino Viégas — Materiais escolares e ambiente de estudo" loading="lazy">
+  </picture>
+  <picture>
+    <source type="image/webp" srcset="imagens/escola8.webp">
+    <img src="imagens/escola8.jpg" alt="Colégio Brazilino Viégas — Expressão cultural - Boneco folclórico" loading="lazy">
+  </picture>
+  <picture>
+    <source type="image/webp" srcset="imagens/escola9.webp">
+    <img src="imagens/escola9.jpg" alt="Colégio Brazilino Viégas — Instrumento antigo de navegação - Compasso" loading="lazy">
+  </picture>
+  <picture>
+    <source type="image/webp" srcset="imagens/escola10.webp">
+    <img src="imagens/escola10.jpg" alt="Colégio Brazilino Viégas — Livros antigos da biblioteca escolar" loading="lazy">
+  </picture>
+  <picture>
+    <source type="image/webp" srcset="imagens/escola4.webp">
+    <img src="imagens/escola4.jpg" alt="Colégio Brazilino Viégas — Tecnologia e inovação na educação" loading="lazy">
+  </picture>
+</div>
+</section>
+</main>
+<footer>
+<p>Colégio Estadual Brazilino Viégas — Alagoinhas-BA</p>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.menu-toggle').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var nav = btn.nextElementSibling;
+      if(!nav) return;
+      nav.classList.toggle('open');
+      var expanded = nav.classList.contains('open');
+      btn.setAttribute('aria-expanded', expanded);
+    });
+  });
+});
+</script>
+</body>
+</html>
