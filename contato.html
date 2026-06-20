@@ -11,7 +11,7 @@
 <header>
     <h1>Contato</h1>
 
-    <button class="menu-toggle" aria-expanded="false" aria-label="Abrir menu">☰</button>
+    <button class="menu-toggle" aria-expanded="false" aria-label="Abrir menu">☰</button><button type="button" class="theme-toggle" aria-label="Alternar tema">🌙 Escuro</button>
 
     <nav>
         <ul>
@@ -28,7 +28,7 @@
 <section>
     <h2>Envie sua mensagem</h2>
 
-    <form>
+    <form id="formContato">
 
         <p>
             <label for="nome">Nome:</label><br>
@@ -64,6 +64,7 @@
 
         <button type="submit">Enviar</button>
         <button type="reset">Limpar</button>
+        <div id="form-feedback" class="feedback"></div>
 
     </form>
 </section>
@@ -72,21 +73,9 @@
 
 <footer>
     <p>Contato institucional — Colégio Estadual Brazilino Viégas</p>
-</footer>
+<p class="footer-meta"><span id="visit-count" class="visit-count"></span></p></footer>
 
-<script>
-document.addEventListener('DOMContentLoaded', function(){
-  document.querySelectorAll('.menu-toggle').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var nav = btn.nextElementSibling;
-      if(!nav) return;
-      nav.classList.toggle('open');
-      var expanded = nav.classList.contains('open');
-      btn.setAttribute('aria-expanded', expanded);
-    });
-  });
-});
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>

@@ -220,9 +220,11 @@ footer {
 
     /* Layout geral */
     html { font-size: 100%; }
-    body {
+    body {<script src="script.js"></script>
+
+
         font-size: 16px;
-    }
+    } 
 
     header {
         padding: 15px;

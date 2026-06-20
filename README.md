@@ -29,6 +29,10 @@ O objetivo foi estilizar e tornar responsivo o site institucional desenvolvido a
 - Tabela de informações
 - Imagens adaptáveis
 - Design visual organizado
+- Calculadora automática de médias escolares
+- Lista dinâmica de projetos com busca
+- Lightbox interativo para a galeria de imagens
+- Validação de formulário de contato com mensagens de feedback
 
 ## Responsividade
 O site foi desenvolvido para funcionar em:

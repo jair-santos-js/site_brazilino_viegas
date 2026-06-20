@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Colégio Estadual Brazilino Viégas</title><link href="style.css" rel="stylesheet"/></head><body><header><h1>Colégio Estadual Brazilino Viégas</h1><p><span class="nome-escola">Educação, Tecnologia e Inclusão Social</span></p><button aria-expanded="false" aria-label="Abrir menu" class="menu-toggle">☰</button><nav><ul><li><a href="index.html">Início</a></li><li><a href="sobre.html">Sobre Nós</a></li><li><a href="cursos.html">Cursos</a></li><li><a href="contato.html">Contato</a></li></ul></nav></header><main><section><h2>Bem-vindo ao nosso colégio</h2><article><h3>Educação de qualidade</h3><p>
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Colégio Estadual Brazilino Viégas</title><link href="style.css" rel="stylesheet"/></head><body><header><h1>Colégio Estadual Brazilino Viégas</h1><p><span class="nome-escola">Educação, Tecnologia e Inclusão Social</span></p><button aria-expanded="false" aria-label="Abrir menu" class="menu-toggle">☰</button><button type="button" class="theme-toggle" aria-label="Alternar tema">🌙 Escuro</button><nav><ul><li><a href="index.html">Início</a></li><li><a href="sobre.html">Sobre Nós</a></li><li><a href="cursos.html">Cursos</a></li><li><a href="contato.html">Contato</a></li></ul></nav></header><main><section><h2>Bem-vindo ao nosso colégio</h2><article><h3>Educação de qualidade</h3><p>
             O Colégio Estadual Brazilino Viégas atua na formação educacional de jovens e adultos,
             promovendo inclusão, cidadania e inovação tecnológica.
         </p></article></section><section><h2>Projeto de Extensão</h2><article><h3>IA na Escola</h3><p>
@@ -10,16 +10,5 @@
                 Ministério da Educação
             </a></li></ul></aside></main><footer><p>
         Desenvolvido por Jair dos Santos Lima — Licenciatura em Computação — UFRB
-    </p></footer><script>
-document.addEventListener('DOMContentLoaded', function(){
-  document.querySelectorAll('.menu-toggle').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      var nav = btn.nextElementSibling;
-      if(!nav) return;
-      nav.classList.toggle('open');
-      var expanded = nav.classList.contains('open');
-      btn.setAttribute('aria-expanded', expanded);
-    });
-  });
-});
-</script></body></html>
+    </p><p class="footer-meta"><span id="visit-count" class="visit-count"></span></p></footer><script src="script.js"></script>
+</body></html>
