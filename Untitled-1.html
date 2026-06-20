@@ -22,8 +22,7 @@
         }
     </style>
 </head>
-<body> <script src="script.js"></script>
-
+<body>
 
     <!-- 1. Elementos estruturados no DOM -->
     <h1 id="tituloPrincipal">Título Original</h1>
@@ -37,36 +36,6 @@
         <button id="meuBotao">Mudar Cor do Título</button>
     </div>
 
-    <script>
-        // 2. SELEÇÃO DE ELEMENTOS DO DOM
-        const titulo = document.getElementById('tituloPrincipal');
-        const paragrafo = document.querySelector('#paragrafoExemplo');
-        const inputUsuario = document.querySelector('#meuInput');
-        const botao = document.querySelector('#meuBotao');
-
-        // 3. MODIFICAÇÃO DE ESTILO INICIAL VIA JS
-        titulo.style.color = "darkblue";
-
-        // 4. RESPOSTA AO EVENTO DE CLIQUE (Modifica Estilo Cor)
-        botao.addEventListener('click', function() {
-            const cores = ['red', 'green', 'purple', 'orange', 'blue'];
-            const corAleatoria = cores[Math.floor(Math.random() * cores.length)];
-            titulo.style.color = corAleatoria; 
-        });
-
-        // 5. RESPOSTA AO EVENTO DE INPUT (Modifica Conteúdo e Estilo de Fundo)
-        inputUsuario.addEventListener('input', function(evento) {
-            let textoDigitado = evento.target.value;
-            
-            if (textoDigitado.trim() !== "") {
-                paragrafo.textContent = textoDigitado; // Modifica Conteúdo
-                paragrafo.style.backgroundColor = "#e0f7fa"; // Modifica Estilo
-            } else {
-                paragrafo.textContent = "Este é o parágrafo inicial.";
-                paragrafo.style.backgroundColor = "transparent";
-            }
-        });
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
