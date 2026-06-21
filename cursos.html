@@ -1,4 +1,100 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Cursos</title><link href="style.css" rel="stylesheet"/></head><body><header><h1>Cursos e Projetos</h1><button aria-expanded="false" aria-label="Abrir menu" class="menu-toggle">☰</button><button type="button" class="theme-toggle" aria-label="Alternar tema">🌙 Escuro</button><nav><ul><li><a href="index.html">Início</a></li><li><a href="sobre.html">Sobre Nós</a></li><li><a href="cursos.html">Cursos</a></li><li><a href="contato.html">Contato</a></li></ul></nav></header><main><section><h2>Projetos Educacionais</h2><table><caption>Tabela de Projetos</caption><thead><tr><th>Projeto</th><th>Área</th><th>Público</th></tr></thead><tbody><tr><td>IA na Escola</td><td>Tecnologia</td><td>Professores</td></tr><tr><td>Laboratório Digital</td><td>Informática</td><td>Estudantes</td></tr><tr><td>Educação Ambiental</td><td>Sustentabilidade</td><td>Comunidade Escolar</td></tr></tbody></table></section>
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cursos</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>Cursos e Projetos</h1>
+      <button aria-expanded="false" aria-label="Abrir menu" class="menu-toggle">☰</button>
+      <button type="button" class="theme-toggle" aria-label="Alternar tema">🌙 Escuro</button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html">Sobre Nós</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h2>Projetos Educacionais</h2>
+        <div class="container-busca">
+          <input type="text" id="buscaCurso" placeholder="🔎 Digite para buscar um curso...">
+        </div>
+        <table>
+          <caption>Tabela de Projetos</caption>
+          <thead>
+            <tr><th>Projeto</th><th>Área</th><th>Público</th></tr>
+          </thead>
+          <tbody>
+            <tr class="item-curso"><td>IA na Escola</td><td>Tecnologia</td><td>Professores</td></tr>
+            <tr class="item-curso"><td>Laboratório Digital</td><td>Informática</td><td>Estudantes</td></tr>
+            <tr class="item-curso"><td>Educação Ambiental</td><td>Sustentabilidade</td><td>Comunidade Escolar</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="interactive-area">
+        <h2>Calculadora de Média Escolar</h2>
+        <h3>📝 Calcule sua Média</h3>
+        <form id="formMedia">
+          <input type="number" id="nota1" placeholder="Nota 1" min="0" max="10" required>
+          <input type="number" id="nota2" placeholder="Nota 2" min="0" max="10" required>
+          <input type="number" id="nota3" placeholder="Nota 3" min="0" max="10" required>
+          <button type="submit">Calcular Média</button>
+        </form>
+        <div id="resultadoMedia"></div>
+      </section>
+
+      <section class="interactive-area">
+        <h2>Lista Dinâmica de Projetos</h2>
+        <form id="project-form" class="project-form">
+          <div class="project-row"><label for="project-name">Nome do projeto:</label><input type="text" id="project-name" required></div>
+          <div class="project-row"><label for="project-area">Área:</label><input type="text" id="project-area" required></div>
+          <div class="project-row"><label for="project-publico">Público:</label><input type="text" id="project-publico" required></div>
+          <button type="submit">Adicionar projeto</button>
+        </form>
+        <div class="project-search">
+          <label for="project-search">Buscar projetos:</label>
+          <input type="search" id="project-search" placeholder="Nome ou área do projeto">
+        </div>
+        <table>
+          <caption>Projetos cadastrados</caption>
+          <thead><tr><th>Projeto</th><th>Área</th><th>Público</th></tr></thead>
+          <tbody id="projetos-tbody"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <section>
+      <h2>Galeria de Imagens</h2>
+      <p>Conheça melhor nossa escola através das fotos:</p>
+      <div class="galeria">
+        <picture><source type="image/webp" srcset="imagens/escola1.webp"><img src="imagens/escola1.jpg" alt="Colégio Brazilino Viégas — Vista frontal do Colégio Brazilino Viégas" loading="lazy"></picture>
+        <picture><source type="image/webp" srcset="imagens/escola2.webp"><img src="imagens/escola2.jpg" alt="Colégio Brazilino Viégas — Alunos no pátio da escola" loading="lazy"></picture>
+        <picture><source type="image/webp" srcset="imagens/escola3.webp"><img src="imagens/escola3.jpg" alt="Colégio Brazilino Viégas — Sala de aula moderna" loading="lazy"></picture>
+        <picture><source type="image/webp" srcset="imagens/escola4.webp"><img src="imagens/escola4.jpg" alt="Colégio Brazilino Viégas — Biblioteca escolar" loading="lazy"></picture>
+        <picture><source type="image/webp" srcset="imagens/escola5.webp"><img src="imagens/escola5.jpg" alt="Colégio Brazilino Viégas — Evento cultural na escola" loading="lazy"></picture>
+        <picture><source type="image/webp" srcset="imagens/escola6.webp"><img src="imagens/escola6.jpg" alt="Colégio Brazilino Viégas — Laboratório de informática" loading="lazy"></picture>
+        <picture><source type="image/webp" srcset="imagens/escola7.webp"><img src="imagens/escola7.jpg" alt="Colégio Brazilino Viégas — Quadra esportiva" loading="lazy"></picture>
+        <picture><source type="image/webp" srcset="imagens/escola8.webp"><img src="imagens/escola8.jpg" alt="Colégio Brazilino Viégas — Formatura de alunos" loading="lazy"></picture>
+        <picture><source type="image/webp" srcset="imagens/escola9.webp"><img src="imagens/escola9.jpg" alt="Colégio Brazilino Viégas — Projeto ambiental" loading="lazy"></picture>
+        <picture><source type="image/webp" srcset="imagens/escola10.webp"><img src="imagens/escola10.jpg" alt="Colégio Brazilino Viégas — Equipe pedagógica" loading="lazy"></picture>
+      </div>
+    </section>
+
+    <footer>
+      <p>Site acadêmico desenvolvido para disciplina Desenvolvimento de Software I</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
 <section class="interactive-area">
   <h2>Calculadora de Média Escolar</h2>
   <h3>📝 Calcule sua Média</h3>

@@ -16,7 +16,20 @@ body {
     background-color: #f4f6f9;
     color: #000; /* texto do corpo em preto */
     line-height: 1.6;
-} <script src="script.js"></script>
+}
+
+/* Quando a classe dark-mode estiver ativa no body, muda as cores */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Você também pode mudar a cor dos cards e seções */
+body.dark-mode main,
+body.dark-mode section {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
 
 
 /* CABEÇALHO */
@@ -221,11 +234,7 @@ footer {
 
     /* Layout geral */
     html { font-size: 100%; }
-    body {<script src="script.js"></script>
-
-
-        font-size: 16px;
-    } 
+    body { font-size: 16px; }
 
     header {
         padding: 15px;
@@ -395,3 +404,49 @@ footer {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+/* ==========================
+   Lightbox e ajustes de Dark Mode
+   (anexados no final do arquivo)
+   ========================== */
+
+/* Lightbox: Janela de zoom para galerias */
+#lightbox {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.85);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.28s ease, visibility 0.28s ease;
+    z-index: 1000;
+}
+
+#lightbox.mostrar {
+    visibility: visible;
+    opacity: 1;
+}
+
+#lightbox img {
+    max-width: 92%;
+    max-height: 92%;
+    border-radius: 8px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+}
+
+#fecharLightbox {
+    position: absolute;
+    top: 18px;
+    right: 28px;
+    color: #ffffff;
+    font-size: 2.2rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Ajustes adicionais para dark-mode (contrastes e cards) */
+body.dark-mode header { background-color: #0b3a2b; }
+body.dark-mode footer { background-color: #0a2a1f; }
+body.dark-mode .galeria img { box-shadow: 0 6px 18px rgba(0,0,0,0.6); }

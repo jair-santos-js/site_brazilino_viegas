@@ -1,89 +1,107 @@
-// Aguarda o navegador carregar o HTML antes de rodar o JS
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("=== SCRIPT CARREGADO COM SUCESSO ===");
+    console.log("=== SISTEMA INTEGRADO CARREGADO ===");
 
     // =======================================================
-    // 🌙 FUNCIONALIDADE 1: MODO ESCURO (index.html)
+    // 1. MODO ESCURO (Funciona em todas as páginas com o botão)
     // =======================================================
     const botaoTema = document.querySelector('.theme-toggle');
-    
     if (botaoTema) {
-        console.log("Botão 'Escuro' detectado!");
         botaoTema.addEventListener('click', function() {
             document.body.classList.toggle('dark-mode');
-            
-            // Alterna o texto do botão visualmente
             if (document.body.classList.contains('dark-mode')) {
                 botaoTema.textContent = "☀️ Claro";
-                console.log("Modo escuro ativado.");
+                localStorage.setItem('tema', 'escuro'); // Salva a preferência
             } else {
                 botaoTema.textContent = "🌙 Escuro";
-                console.log("Modo claro ativado.");
+                localStorage.setItem('tema', 'claro');
             }
         });
+        // Mantém o tema mesmo se o usuário atualizar a página
+        if (localStorage.getItem('tema') === 'escuro') {
+            document.body.classList.add('dark-mode');
+            botaoTema.textContent = "☀️ Claro";
+        }
     }
 
     // =======================================================
-    // 📝 FUNCIONALIDADE 2: CALCULADORA DE MÉDIA (cursos.html)
+    // 2. CALCULADORA DE MÉDIA (cursos.html)
     // =======================================================
     const formulario = document.getElementById('formMedia');
     const divResultado = document.getElementById('resultadoMedia');
-
     if (formulario) {
-        console.log("Formulário de média detectado!");
         formulario.addEventListener('submit', function(event) {
-            // EVITA O RECARREGAMENTO DA PÁGINA (Sumiço do ?)
             event.preventDefault(); 
-            
             const n1 = parseFloat(document.getElementById('nota1').value) || 0;
             const n2 = parseFloat(document.getElementById('nota2').value) || 0;
             const n3 = parseFloat(document.getElementById('nota3').value) || 0;
-            
             const mediaFinal = (n1 + n2 + n3) / 3;
-            console.log("Cálculo realizado no console: " + mediaFinal.toFixed(1));
-            
             if (divResultado) {
                 divResultado.innerHTML = "<p>Sua média é: <strong>" + mediaFinal.toFixed(1) + "</strong></p>";
             }
         });
     }
-});
 
-// =======================================================
-// Atividade de Manipulação do DOM (Untitled-1.html)
-// Transfere lógica que estava embutida no HTML para aqui
-document.addEventListener('DOMContentLoaded', function() {
-    console.log("=== ATIVIDADE DOM CARREGADA ===");
-
-    // 2. SELEÇÃO DE ELEMENTOS DO DOM
-    const titulo = document.getElementById('tituloPrincipal');
-    const paragrafo = document.querySelector('#paragrafoExemplo');
-    const inputUsuario = document.querySelector('#meuInput');
-    const botao = document.querySelector('#meuBotao');
-
-    // Garante que os elementos existem na página antes de aplicar as funções
-    if (titulo && paragrafo && inputUsuario && botao) {
-        // 3. MODIFICAÇÃO DE ESTILO INICIAL VIA JS
-        titulo.style.color = "darkblue";
-
-        // 4. RESPOSTA AO EVENTO DE CLIQUE (Modifica Estilo Cor)
-        botao.addEventListener('click', function() {
-            const cores = ['red', 'green', 'purple', 'orange', 'blue'];
-            const corAleatoria = cores[Math.floor(Math.random() * cores.length)];
-            titulo.style.color = corAleatoria; 
-            console.log("Cor alterada para: " + corAleatoria);
+    // =======================================================
+    // 3. FILTRO DE BUSCA DINÂMICA (cursos.html)
+    // =======================================================
+    const campoBusca = document.getElementById('buscaCurso');
+    const itensCursos = document.querySelectorAll('.item-curso');
+    if (campoBusca && itensCursos.length > 0) {
+        campoBusca.addEventListener('input', function(evento) {
+            const textoDigitado = evento.target.value.toLowerCase();
+            itensCursos.forEach(function(curso) {
+                const textoDoCurso = curso.textContent.toLowerCase();
+                if (textoDoCurso.includes(textoDigitado)) {
+                    curso.style.display = ""; // Mostra o curso
+                } else {
+                    curso.style.display = "none"; // Esconde o curso
+                }
+            });
         });
+    }
 
-        // 5. RESPOSTA AO EVENTO DE INPUT (Modifica Conteúdo e Estilo de Fundo)
-        inputUsuario.addEventListener('input', function(evento) {
-            let textoDigitado = evento.target.value;
-            
-            if (textoDigitado.trim() !== "") {
-                paragrafo.textContent = textoDigitado; // Modifica Conteúdo
-                paragrafo.style.backgroundColor = "#e0f7fa"; // Modifica Estilo
-            } else {
-                paragrafo.textContent = "Este é o parágrafo inicial.";
-                paragrafo.style.backgroundColor = "transparent";
+    // =======================================================
+    // 4. LIGHTBOX INTERATIVO (index.html - Galeria)
+    // =======================================================
+    const imagensGaleria = document.querySelectorAll('.galeria img');
+    let caixaLightbox = document.getElementById('lightbox');
+    let imagemZoom = document.getElementById('imagemLightbox');
+    let botaoFechar = document.getElementById('fecharLightbox');
+
+    // Se o markup do lightbox não existir no HTML, cria dinamicamente
+    if (!caixaLightbox && imagensGaleria.length > 0) {
+        caixaLightbox = document.createElement('div');
+        caixaLightbox.id = 'lightbox';
+        caixaLightbox.className = 'lightbox-oculto';
+
+        botaoFechar = document.createElement('span');
+        botaoFechar.id = 'fecharLightbox';
+        botaoFechar.innerHTML = '&times;';
+
+        imagemZoom = document.createElement('img');
+        imagemZoom.id = 'imagemLightbox';
+        imagemZoom.alt = 'Zoom da foto';
+
+        caixaLightbox.appendChild(botaoFechar);
+        caixaLightbox.appendChild(imagemZoom);
+        document.body.appendChild(caixaLightbox);
+    }
+
+    if (imagensGaleria.length > 0 && caixaLightbox && imagemZoom && botaoFechar) {
+        imagensGaleria.forEach(function(img) {
+            img.addEventListener('click', function() {
+                imagemZoom.src = img.src; // Copia o caminho da foto clicada
+                caixaLightbox.classList.add('mostrar'); // Abre o lightbox
+            });
+        });
+        // Fecha ao clicar no 'X'
+        botaoFechar.addEventListener('click', function() {
+            caixaLightbox.classList.remove('mostrar');
+        });
+        // Fecha ao clicar no fundo escuro fora da foto
+        caixaLightbox.addEventListener('click', function(e) {
+            if (e.target !== imagemZoom) {
+                caixaLightbox.classList.remove('mostrar');
             }
         });
     }
