@@ -450,3 +450,30 @@ footer {
 body.dark-mode header { background-color: #0b3a2b; }
 body.dark-mode footer { background-color: #0a2a1f; }
 body.dark-mode .galeria img { box-shadow: 0 6px 18px rgba(0,0,0,0.6); }
+
+/* =======================================================
+   📋 AJUSTES DO MODO ESCURO PARA O FORMULÁRIO DE CONTATO
+   ======================================================= */
+body.dark-mode form {
+    background-color: #1e1e1e !important;
+    border: 1px solid #333333 !important;
+}
+
+body.dark-mode input, 
+body.dark-mode textarea, 
+body.dark-mode select {
+    background-color: #2d2d2d !important;
+    color: #ffffff !important;
+    border: 1px solid #444444 !important;
+}
+
+body.dark-mode button[type="submit"],
+body.dark-mode input[type="submit"] {
+    background-color: #0056b3 !important;
+    color: #ffffff !important;
+    border: none !important;
+}
+
+body.dark-mode button[type="submit"]:hover {
+    background-color: #004085 !important;
+}
